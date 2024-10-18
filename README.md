@@ -59,3 +59,22 @@ func main() {
  DisableCallbacks      | bool     | false            | 是否禁用callbacks方法执行，开启后，callbacks将不生效                                                         
  SqlMigrationSeparator | string   | __               | 脚本文件名中版本号和描述之间的分隔符                                                                          
  SqlMigrationPrefix    | string   | V                | 脚本文件名的前缀，用于标识脚本的版本号                                                                         
+
+
+
+demo:
+```go
+func main() {
+	db, _ := sql.Open(database.T_MYSQL, "root:xxxxx@tcp(192.168.xxx.xx:3306)/goflyway?charset=utf8")
+	// use database.T_SQLITE 、 database.T_MYSQL or "sqlite","mysql"
+	f, err := flyway.Open(database.T_MYSQL, db, &flyway.Config{Locations: []string{"db_migration"}, OutOfOrder: true, BaselineVersion: "1", BaselineOnMigrate: true, SqlMigrationPrefix: "V", SqlMigrationSeparator: "__"})
+	if err != nil {
+		panic(err)
+	}
+	err = f.Migrate()
+	if err != nil {
+		panic(err)
+	}	
+	fmt.Println("success")
+}
+```
