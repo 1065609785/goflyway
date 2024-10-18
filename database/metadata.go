@@ -1,9 +1,9 @@
 package database
 
 import (
+	"com.goldstar/goflyway/goflyway/utils"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/utils"
 	"os"
 	"path/filepath"
 	"runtime"

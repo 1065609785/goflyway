@@ -1,11 +1,11 @@
 package history
 
 import (
+	"com.goldstar/goflyway/goflyway/consts"
+	"com.goldstar/goflyway/goflyway/database"
+	"com.goldstar/goflyway/goflyway/utils"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/consts"
-	"github.com/goflyway/goflyway/database"
-	"github.com/goflyway/goflyway/utils"
 	"time"
 )
 

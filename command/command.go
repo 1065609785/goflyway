@@ -1,13 +1,13 @@
 package command
 
 import (
+	"com.goldstar/goflyway/goflyway/database"
+	"com.goldstar/goflyway/goflyway/history"
+	"com.goldstar/goflyway/goflyway/location"
+	"com.goldstar/goflyway/goflyway/logger"
 	"context"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/database"
-	"github.com/goflyway/goflyway/history"
-	"github.com/goflyway/goflyway/location"
-	"github.com/goflyway/goflyway/logger"
 )
 
 type Command interface {

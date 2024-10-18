@@ -1,0 +1,8 @@
+version: 1
+type: go
+resolver:
+    repo: goldstar-go
+    serverId: skynet
+deployer:
+    repo: goldstar-go
+    serverId: skynet

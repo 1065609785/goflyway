@@ -1,14 +1,14 @@
 package command
 
 import (
+	"com.goldstar/goflyway/goflyway/consts"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/consts"
 	"strings"
 )
 
 func init() {
-	Registry(consts.CMD_NAME_MIGRATE, &Validate{})
+	Registry(consts.CMD_NAME_VALIDATE, &Validate{})
 }
 
 type Validate struct {

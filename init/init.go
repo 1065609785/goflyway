@@ -1,6 +1,6 @@
 package init
 
 import (
-	_ "github.com/goflyway/goflyway/database/mysql"
-	_ "github.com/goflyway/goflyway/database/sqlite"
+	_ "com.goldstar/goflyway/goflyway/database/mysql"
+	_ "com.goldstar/goflyway/goflyway/database/sqlite"
 )

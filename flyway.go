@@ -1,12 +1,12 @@
 package flyway
 
 import (
+	"com.goldstar/goflyway/goflyway/command"
+	"com.goldstar/goflyway/goflyway/consts"
+	"com.goldstar/goflyway/goflyway/database"
+	_ "com.goldstar/goflyway/goflyway/init"
+	"com.goldstar/goflyway/goflyway/logger"
 	"database/sql"
-	"github.com/goflyway/goflyway/command"
-	"github.com/goflyway/goflyway/consts"
-	"github.com/goflyway/goflyway/database"
-	_ "github.com/goflyway/goflyway/init"
-	"github.com/goflyway/goflyway/logger"
 )
 
 type flyway struct {

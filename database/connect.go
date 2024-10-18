@@ -30,6 +30,11 @@ func (s Session) Exec(sql string, param ...any) error {
 	return err
 }
 
+// ExecNew 执行数据库语句,支持返回结果集
+func (s Session) ExecNew(sql string, param ...any) (sql.Result, error) {
+	r, err := s.db.Exec(sql, param...)
+	return r, err
+}
 func (s Session) Insert(sql string, param ...any) (sql.Result, error) {
 	return s.db.Exec(sql, param...)
 }

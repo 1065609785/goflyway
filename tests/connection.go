@@ -1,9 +1,9 @@
 package tests
 
 import (
+	_ "com.goldstar/go-sql-driver/mysql"
+	_ "com.goldstar/mattn/go-sqlite3"
 	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
-	_ "github.com/mattn/go-sqlite3"
 )
 
 func ConnSqlite() (*sql.DB, error) {

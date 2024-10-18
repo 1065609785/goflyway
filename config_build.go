@@ -1,10 +1,10 @@
 package flyway
 
 import (
+	"com.goldstar/goflyway/goflyway/consts"
+	"com.goldstar/goflyway/goflyway/logger"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/consts"
-	"github.com/goflyway/goflyway/logger"
 	"strings"
 )
 

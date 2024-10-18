@@ -1,12 +1,12 @@
 # GO flyway
 
 ![GitHub License](https://img.shields.io/github/license/goflyway/goflyway)
-[![Static Badge](https://img.shields.io/badge/go.dev-reference-blue?style=flat)](https://pkg.go.dev/github.com/goflyway/goflyway)
+[![Static Badge](https://img.shields.io/badge/go.dev-reference-blue?style=flat)](https://pkg.go.dev/com.goldstar/goflyway/goflyway)
 
 ## Install
 
 ```shell
-go get -u github.com/goflyway/goflyway
+go get -u com.goldstar/goflyway/goflyway
 ```
 
 ## Quick start
@@ -16,9 +16,9 @@ package main
 
 import (
 	"database/sql"
-	_ "github.com/mattn/go-sqlite3"
-	"github.com/goflyway/goflyway"
-	"github.com/goflyway/goflyway/database"
+	_ "com.goldstar/mattn/go-sqlite3"
+	"com.goldstar/goflyway/goflyway"
+	"com.goldstar/goflyway/goflyway/database"
 )
 
 func main() {

@@ -1,11 +1,11 @@
 package tests
 
 import (
+	flyway "com.goldstar/goflyway/goflyway"
+	"com.goldstar/goflyway/goflyway/command"
+	"com.goldstar/goflyway/goflyway/database"
+	"com.goldstar/goflyway/goflyway/logger"
 	"fmt"
-	flyway "github.com/goflyway/goflyway"
-	"github.com/goflyway/goflyway/command"
-	"github.com/goflyway/goflyway/database"
-	"github.com/goflyway/goflyway/logger"
 	"testing"
 )
 

@@ -1,9 +1,9 @@
 package logger
 
 import (
+	"com.goldstar/goflyway/goflyway/utils"
 	"context"
 	"fmt"
-	"github.com/goflyway/goflyway/utils"
 	"log"
 	"os"
 	"time"

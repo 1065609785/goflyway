@@ -1,9 +1,9 @@
 package sqlite
 
 import (
+	"com.goldstar/goflyway/goflyway/database"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/database"
 )
 
 func init() {

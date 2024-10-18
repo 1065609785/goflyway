@@ -1,13 +1,14 @@
 package command
 
 import (
+	"com.goldstar/goflyway/goflyway/consts"
+	"com.goldstar/goflyway/goflyway/database"
+	"com.goldstar/goflyway/goflyway/history"
+	"com.goldstar/goflyway/goflyway/location"
+	"com.goldstar/goflyway/goflyway/utils"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/consts"
-	"github.com/goflyway/goflyway/database"
-	"github.com/goflyway/goflyway/history"
-	"github.com/goflyway/goflyway/location"
-	"github.com/goflyway/goflyway/utils"
+	"strings"
 	"time"
 )
 
@@ -111,7 +112,21 @@ func (m Migrate) invokeSql(ctx *Context, sql location.SqlFile, latestVersion str
 
 func (m Migrate) invokeSqlContent(database database.Database, content string) (time.Duration, error) {
 	start := time.Now()
-	err := database.Session().Exec(content)
+	//err := database.Session().Exec(content)
+	sqlArr := strings.Split(content, ";")
+	var err error
+	for _, sql := range sqlArr {
+		if strings.TrimSpace(sql) != "" {
+			fmt.Println("待执行目标sql：", sql)
+			r, err := database.Session().ExecNew(sql)
+			if err != nil {
+				return time.Since(start), err
+			}
+			i, _ := r.LastInsertId()
+			i1, _ := r.RowsAffected()
+			fmt.Println("lastinsertId：", i, ",RowsAffected:", i1)
+		}
+	}
 	since := time.Since(start)
 	return since, err
 }

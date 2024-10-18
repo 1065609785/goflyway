@@ -1,12 +1,12 @@
 package location
 
 import (
+	"com.goldstar/goflyway/goflyway/consts"
+	"com.goldstar/goflyway/goflyway/utils"
 	"crypto/sha256"
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/goflyway/goflyway/consts"
-	"github.com/goflyway/goflyway/utils"
 	"io"
 	"io/fs"
 	"os"

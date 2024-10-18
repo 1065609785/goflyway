@@ -1,12 +1,12 @@
 package flyway
 
 import (
+	"com.goldstar/goflyway/goflyway/command"
+	"com.goldstar/goflyway/goflyway/database"
+	"com.goldstar/goflyway/goflyway/history"
+	"com.goldstar/goflyway/goflyway/location"
+	"com.goldstar/goflyway/goflyway/utils"
 	"context"
-	"github.com/goflyway/goflyway/command"
-	"github.com/goflyway/goflyway/database"
-	"github.com/goflyway/goflyway/history"
-	"github.com/goflyway/goflyway/location"
-	"github.com/goflyway/goflyway/utils"
 )
 
 // buildFlyway 构建flyway对象
